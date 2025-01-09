@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Youssef Rajeh</title>
+    <style>
+      .experience {
+        padding: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .experience h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .job {
+        margin-bottom: 30px;
+      }
+
+      .job h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+      }
+
+      .job p {
+        margin: 0 0 10px;
+      }
+
+      .job ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style: disc;
+      }
+
+      .skills {
+        padding: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .skills h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .skills hr {
+        width: 50px;
+        margin: 10px auto;
+        border: 2px solid #f05a28;
+      }
+
+      .skills ul {
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skills li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .skills li strong {
+        color: #f05a28;
+      }
+
+      .navBar {
+        display: flex;
+        flex-direction: column; /* Stacks the elements vertically */
+        align-items: center;
+        background-color: #f3eeee;
+        padding: 10px 0;
+        color: white;
+      }
+
+      .navBar ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navBar ul li {
+        margin: 0 10px;
+      }
+
+      .navBar ul a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .navBar ul a:hover {
+        background-color: #444;
+        border-radius: 5px;
+      }
+
+      #bottomBar {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: rgb(69, 22, 22);
+      }
+
+      #typed {
+        font-size: 16px;
+      }
+
+      .socialMedia {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+      }
+
+      body {
+        background: linear-gradient(-45deg, #82494b, #5d4b46, #2e1627, #728fbf);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+      }
+      .navBar ul a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: 0.5s;
+        position: relative;
+      }
+
+      .navBar ul a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: red;
+        transition: 0.5s;
+      }
+
+      .navBar ul a:hover::before {
+        width: 100%;
+      }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* .socialMedia a img {
+        transition: transform 0.3s;
+      } */
+
+      .page {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .page:target {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .navBar ul a {
+        display: block;
+        padding: 10px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      }
+
+      .navBar ul a:hover {
+        color: red;
+        font-stretch: expanded;
+        transform: scale(1.05);
+      }
+
+      body {
+        caret-color: transparent;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: larger;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      input,
+      textarea,
+      [contenteditable] {
+        caret-color: transparent;
+      }
+
+      .container {
+        width: 1200px;
+        max-width: 100%;
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        height: 100%;
+      }
+
+      .Main {
+        flex-grow: 1;
+        padding: 50px;
+        background-color: white;
+        overflow-y: auto;
+      }
+
+      .navBar {
+        color: white;
+        padding: 10px;
+      }
+
+      .navBar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .navBar ul li {
+        margin: 0;
+      }
+
+      .navBar ul a {
+        display: block;
+        padding: 10px 15px;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .navBar ul a:hover {
+        color: red;
+        font-stretch: expanded;
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+      }
+
+      .socialMedia a {
+        margin: 0 10px;
+      }
+
+      .page {
+        padding: 20px;
+        background-color: white;
+        color: #343a40;
+        margin-top: 10px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      hr {
+        margin-top: 20px;
+      }
+
+      #page1 {
+        text-align: center;
+        color: rebeccapurpl;
+      }
+      .socialMedia a img:hover {
+        transform: scale(1.2) rotate(10deg);
+        transition: 0.3s ease;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (max-width: 768px) {
+        .container {
+          height: auto;
+          color: black;
+        }
+        .job {
+          display: none;
+        }
+        .skills ul {
+          padding: 20px;
+          margin-top: 2000px;
+          text-align: center;
+        }
+        .experience ul {
+          margin-bottom: 50px;
+          padding: 20px;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+        .professional-summary {
+          margin-bottom: 50px;
+          padding: 20px;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+        .navBar ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        .navBar ul li {
+          flex-direction: column;
+          align-items: center;
+        }
+        .Main {
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          margin-bottom: 20px;
+          height: auto;
+          color: black;
+        }
+        .experience {
+          margin-bottom: 50px;
+          padding: 20px;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+        .professional-summary {
+          margin-bottom: 50px;
+          padding: 20px;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+        .page5.page {
+          display: none;
+        }
+        .Main {
+          padding: 10px;
+        }
+
+        .navBar ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Main">
+        <div id="page1">
+          <h1>Youssef Rajeh</h1>
+          <h5>youssefrrajeh@gmail.com</h5>
+          <h5>(548) 388 - 4360</h5>
+        </div>
+        <div id="page2" class="page">
+          <section class="professional-summary">
+            <h3>Professional Summary</h3>
+            <hr />
+            <p>
+              Highly skilled and detail-oriented professional with a strong
+              foundation in computer programming, analysis, and applied
+              chemistry. Currently pursuing advanced studies in Computer
+              Programming and Analysis with a focus on software development, web
+              technologies, and database management. Proficient in programming
+              languages such as C++, Java, and JavaScript, and experienced in
+              building responsive web applications using HTML and CSS. Adept at
+              designing, developing, and optimizing database systems using SQL,
+              with a focus on solving data-driven challenges.
+            </p>
+            <p>
+              Demonstrated expertise in leading cross-functional teams and
+              delivering high-quality results under strict deadlines. Proven
+              track record of managing production workflows, streamlining
+              processes, and implementing innovative solutions to enhance team
+              performance and product quality. Experienced in utilizing
+              analytical skills to debug complex code, optimize system
+              architecture, and ensure compliance with technical and industry
+              standards.
+            </p>
+            <p>
+              Former Plastic Blowing HDPE & PP Section Supervisor with a history
+              of achieving production targets through effective team management
+              and process improvements. Known for maintaining precise
+              documentation, addressing challenges proactively, and fostering a
+              culture of accountability and efficiency.
+            </p>
+            <p>
+              Combining technical expertise with a scientific background,
+              including hands-on experience as a Quality Control and Laboratory
+              Technician. Skilled at applying advanced analytical methods,
+              managing multiple projects simultaneously, and collaborating with
+              diverse teams to drive innovation and continuous improvement.
+              Dedicated to leveraging both technical and managerial experience
+              to create impactful software solutions and contribute to
+              organizational success.
+            </p>
+          </section>
+        </div>
+
+        <div id="page3" class="page">
+          <section class="skills">
+            <h3>Skills</h3>
+            <hr />
+            <ul>
+              <li>
+                <strong>Team Collaboration:</strong> Ability to work effectively
+                within cross-functional teams, contributing to shared goals.
+              </li>
+              <li>
+                <strong>Communication:</strong> Strong verbal and written
+                communication skills to convey complex ideas clearly.
+              </li>
+              <li>
+                <strong>Problem-Solving:</strong> Analytical mindset for
+                identifying and solving data-driven business challenges.
+              </li>
+              <li>
+                <strong>Curiosity & Continuous Learning:</strong> Driven to
+                continuously learn new skills and stay informed about the latest
+                technologies.
+              </li>
+              <li>
+                <strong>Adaptability:</strong> Comfortable working in a
+                fast-paced environment and adapting to new tools or
+                technologies.
+              </li>
+              <li>
+                <strong>Time Management:</strong> Strong organizational skills
+                to manage tasks and meet deadlines effectively.
+              </li>
+              <li>
+                <strong>Leadership:</strong> Successfully led cross-functional
+                teams to meet production goals.
+              </li>
+              <li>
+                <strong>Attention to Detail:</strong> Thorough in validating
+                data quality and ensuring accuracy in analysis and solutions.
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div id="page4" class="page">
+          <section class="experience">
+            <h2>Experience</h2>
+
+            <div class="job">
+              <h3>Plastic Blowing HDPE & PP Section Supervisor</h3>
+              <p><strong>May 2020 – September 2022</strong></p>
+              <p><em>Hoka Industry, Douala, Cameroon</em></p>
+              <ul>
+                <li>
+                  Offered guidance and support to the team, creating a positive
+                  and productive work atmosphere.
+                </li>
+                <li>
+                  Kept accurate records of employee performance, disciplinary
+                  actions, and training progress.
+                </li>
+                <li>
+                  Identified areas for improvement and developed actionable
+                  strategies to enhance team performance.
+                </li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Quality Control Inspector</h3>
+              <p><strong>September 2018 – May 2020</strong></p>
+              <p><em>Atlas Negoce, Douala, Cameroon</em></p>
+            </div>
+
+            <div class="job">
+              <h3>Production Manager</h3>
+              <p><strong>June 2015 – September 2018</strong></p>
+              <p><em>Atlas Negoce, Douala, Cameroon</em></p>
+              <ul>
+                <li>
+                  Created quality control plans and ensured production standards
+                  aligned with project requirements.
+                </li>
+                <li>
+                  Managed research and development initiatives to drive
+                  innovation and enhance processes.
+                </li>
+                <li>
+                  Identified and implemented improvements to increase
+                  productivity and product quality.
+                </li>
+                <li>
+                  Led audits and monitored operations to ensure cost efficiency,
+                  quality, and timely delivery.
+                </li>
+                <li>
+                  Conducted performance evaluations, offering feedback to
+                  support employee growth and team development.
+                </li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Laboratory Technician</h3>
+              <p><strong>June 2008 – September 2014</strong></p>
+              <p><em>Madar Group, Damascus, Syria</em></p>
+              <ul>
+                <li>
+                  Managed multiple projects simultaneously, consistently meeting
+                  strict deadlines.
+                </li>
+                <li>
+                  Identified deviations in production procedures and promptly
+                  reported them to the supervisor.
+                </li>
+                <li>
+                  Prepared analysis reports and communicated findings to
+                  internal teams and external clients.
+                </li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h3>Laboratory Technician</h3>
+              <p><strong>November 2006 – May 2008</strong></p>
+              <p><em>SICCO, Damascus, Syria</em></p>
+              <ul>
+                <li>
+                  Performed sample analysis using spectrophotometry and
+                  chromatography.
+                </li>
+                <li>
+                  Maintained detailed records and prepared comprehensive
+                  analysis reports.
+                </li>
+                <li>
+                  Collaborated with production and R&D teams to optimize
+                  processes based on analytical results.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div id="page5" class="page">
+          <h3>Education</h3>
+          <hr />
+          <section class="education">
+            <div class="degree">
+              <h3>
+                - Computer Programming and Analysis – Advanced Diploma (CO-OP)
+              </h3>
+              <p><strong>Sep 2023 – Ongoing</strong></p>
+              <p><em>Fanshawe College, London Ontario</em></p>
+              <p><strong>Maintained GPA:</strong> 3.9</p>
+              <ul>
+                <li>
+                  <strong>Programming Languages:</strong> Java, C++, JavaScript,
+                  HTML, CSS
+                </li>
+                <li>
+                  <strong>Database Management:</strong> SQL, non-relational and
+                  relational databases
+                </li>
+                <li>
+                  <strong>Analytical Thinking:</strong> Ability to analyze
+                  complex code and system architecture to identify issues and
+                  optimize performance.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="education">
+            <div class="degree">
+              <h3>
+                - General Arts and Science - 1 Yr (English Language Studies)
+                Level 09
+              </h3>
+              <p><strong>January – September 2023</strong></p>
+              <p><em>Fanshawe College</em></p>
+              <p><strong>Maintained GPA:</strong> 4.0</p>
+            </div>
+          </section>
+
+          <section class="education">
+            <div class="degree">
+              <h3>- Applied Chemistry - Bachelor’s Degree</h3>
+              <p><em>Damascus University, Syria</em></p>
+              <p><strong>Sep 2001 – June 2006</strong></p>
+              <ul>
+                <li>
+                  <strong>Analytical Thinking:</strong> Developed the ability to
+                  analyze chemical data and draw logical conclusions from
+                  experiments.
+                </li>
+                <li>
+                  <strong>Research Skills:</strong> Gained experience in
+                  conducting thorough literature reviews, designing experiments,
+                  and applying scientific methodologies.
+                </li>
+                <li>
+                  <strong>Lab Safety and Compliance:</strong> Adherence to
+                  strict safety standards and regulatory guidelines.
+                </li>
+                <li>
+                  <strong>Quantitative Analysis:</strong> Gained proficiency in
+                  calculating concentrations, reaction yields, and other
+                  quantitative chemical metrics.
+                </li>
+                <li>
+                  <strong>Sustainability Awareness:</strong> Learned about
+                  environmental impact and sustainability in chemical processes,
+                  promoting eco-friendly practices in experiments and industry
+                  applications.
+                </li>
+                <li>
+                  <strong>Precision & Accuracy:</strong> Enhanced skills in
+                  delivering accurate results, reducing errors, and following
+                  strict protocols in all experiments.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div id="page6" class="page">
+          <h3>Language</h3>
+          <hr />
+          <ul>
+            <li>
+              <h5>Arabic</h5>
+              <p>Proficient (C2)</p>
+            </li>
+            <li>
+              <h5>French</h5>
+              <p>Intermediate (B1)</p>
+            </li>
+            <li>
+              <h5>English</h5>
+              <p>Advanced (C1)</p>
+            </li>
+          </ul>
+        </div>
+
+        <div id="page7" class="page">
+          <h3>References</h3>
+          <h5>- References available upon request.</h5>
+        </div>
+      </div>
+
+      <div class="navBar">
+        <ul>
+          <li><a href="index.html">Main</a></li>
+          <li><a href="#page1">TOP</a></li>
+          <li><a href="#page2">Professional Summary</a></li>
+          <li><a href="#page3">Skills</a></li>
+          <li><a href="#page4">Experience</a></li>
+          <li><a href="#page5">Education</a></li>
+          <li><a href="#page6">Language</a></li>
+          <li><a href="#page7">References</a></li>
+        </ul>
+
+        <div id="bottomBar">
+          <div id="typed-strings">
+            <p>Welcome to my portfolio!</p>
+            <p>My name is Youssef Rajeh ........</p>
+            <p>An Aspiring Software Developer.</p>
+          </div>
+          <span id="typed"></span>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+        <script>
+          ScrollReveal().reveal(".page", {
+            origin: "bottom",
+            distance: "50px",
+            duration: 1000,
+            reset: true,
+          });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+        <script>
+          particlesJS("particles-js", {
+            particles: {
+              number: { value: 100 },
+              color: { value: "#ffffff" },
+              shape: { type: "circle" },
+              opacity: { value: 0.5 },
+              size: { value: 3 },
+              line_linked: { enable: true, color: "#ffffff" },
+              move: { enable: true, speed: 3 },
+            },
+          });
+        </script>
+        <div
+          id="particles-js"
+          style="position: fixed; width: 100%; height: 100%; z-index: -1"
+        ></div>
+
+        <script>
+          var typed = new Typed("#typed", {
+            stringsElement: "#typed-strings",
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true,
+            backDelay: 1000,
+          });
+        </script>
+
+        <div class="socialMedia">
+          <a
+            href="https://linkedin.com/in/youssef-rajeh-08aa35167"
+            target="_blank"
+            ><img
+              src="https://img.icons8.com/color/48/000000/linkedin.png"
+              alt="LinkedIn"
+              width="30"
+              height="30"
+          /></a>
+          <a href="https://twitter.com/youssef_rajeh" target="_blank"
+            ><img
+              src="https://img.icons8.com/color/48/000000/twitter.png"
+              alt="Twitter"
+              width="30"
+              height="30"
+          /></a>
+          <a href="https://github.com/youssefrajeh" target="_blank"
+            ><img
+              src="https://img.icons8.com/color/48/000000/github.png"
+              alt="GitHub"
+              width="30"
+              height="30"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
